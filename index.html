@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>颱風防災資訊平台</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style/tern_all.css">
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<link href="http://www.taipei.gov.tw/public/MMO/TCG/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+
+
+
+		<meta name="Description" content="尼莎颱風防災資訊平台,NESAT_typhoon"/>
+		<meta name="keywords" content="NESAT_typhoon,颱風,熱帶氣旋,天氣,氣象,尼莎颱風災情,停電,資訊平台"/>
+
+		<!-- og -->
+		<meta property="og:site_name" content="尼莎颱風防災資訊平台,NESAT_typhoon"/>
+		<meta property="og:title" content="尼莎颱風防災資訊平台,NESAT_typhoon"/>
+		<meta property="og:type" content="activity" />
+		<meta property="og:url" content="https://ternmayday.github.io/NESAT_nine/" />
+		<meta property="og:description" content=""/>
+		<meta property="og:image" content="尼莎颱風防災資訊平台,NESAT_typhoon" />
+		<link type="image/jpeg" rel="image_src" href="https://ternmayday.github.io/NESAT_nine/images/typhoon.png" />
+
+	</head>
+	<body>
+		
+
+		<!-- navbar切換區塊  -->
+
+	<div class="header">
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">選單切換</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+					<img src="images/taipei_logo.png">
+					台北市颱風災害動態資訊</a>
+				</div>
+					
+				<!-- 手機隱藏選單區 -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+						
+			
+					
+					<!-- 右選單 -->
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">錯誤回報 New Issue</a></li>
+						<li><a href="#">資料來源: 臺北市府資訊局</a></li>
+						<li><a href="#">License: CC0</a></li>
+					</ul>
+				</div>
+				<!-- 手機隱藏選單區結束 -->
+			</div>
+		</nav>
+	</div>
+	
+
+
+	<!-- 按鈕 -->
+	<div class="btlist">
+		<div class="btn-group btn-group-justified">
+		
+			<li class="btn-group">
+				<a href="#" id="b1-news" class="btn btn-lg act" role="button">最新動態</a>
+			</li>
+			<li class="btn-group" >
+				<a href="#" id="b2-power" class="btn btn-lg" role="button">停電區域</a>
+			</li>
+		
+		</div>
+	</div>
+
+
+	
+	<!-- 停電地圖 -->
+	<div class="container" id="b2" style="display: none;">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+				<div class="alert-info">
+					目前尚有 <em class="num"></em> 處停電。 <br>
+					如有供電問題，請撥打台電客服1911。1040808
+				</div>
+
+				<div id="map"></div>
+
+			</div>
+		</div>
+	</div>	
+
+
+
+	<!-- 表格 -->
+	<div class="container" id="b1">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12">
+
+				<div class="alert-info">防災災情及相關諮詢電話：87863119分機8900~8907 </div>
+
+				<div class="area">
+					<!-- 地區的下拉選單 -->
+					<select class="selectlist"></select>
+				</div>
+				
+					<table class="tern-rwd table table-hover table-striped table-bordered">
+						<thead class="info hidden-xs">
+							<tr>
+								<th class="col-sm-2">發生時間</th>
+								<th class="col-sm-1">區域</th>
+								<th class="col-sm-3">詳細位置</th>
+								<th class="col-sm-6">描述</th>
+							</tr>
+						</thead>
+						<tbody class="list">
+							<!-- 表格區塊 -->
+							<!-- <tr>
+								<td data-th="發生時間"><span>2017-07-29 16:57:03</span></td>
+								<td data-th="區域"><span class="label label-primary">大安區</span></td>
+								<td data-th="詳細位置"><span>交叉路口: 基隆路二段 , 通化街171巷</span></td>
+								<td data-th="描述"><span>行車號誌持續閃燈，無法正常變換燈號 四面的行車和行人號誌燈都閃燈</span></td>
+							</tr>-->
+						</tbody>
+					</table>	
+
+			</div>
+		</div>
+	</div>
+
+
+	<footer> <p> NESAT_nine </p> </footer>
+	
+
+
+		
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+		<script type="text/javascript" src="style/tern_all.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNKGRARHUw0x2-YLLYNl8YPsMDnmBaUBU&callback=initMap"></script>
+
+		
+	
+	</body>
+</html>

@@ -1,0 +1,140 @@
+
+.header {
+	.navbar-default{
+		background-color: #000;
+		border-color: #000;
+
+		.navbar-brand{
+			color:#fff;
+
+			img{
+				max-height: 200%;
+    			width: auto;
+    			float: left;
+    			margin-top: -10px;
+    			margin-right: 10px;
+			}
+		}
+	
+		.navbar-nav > li  {
+			
+			& a {
+				color:#ccc;
+			}
+
+			& a:hover{
+				color:#fff;
+			}
+		}
+
+		
+	}
+}
+
+
+.btlist{
+	margin-top: 51px;
+	li{
+		& a{
+			color: #333;
+    		background-color: #ececec;
+    		border-color: #ccc;
+		}
+
+		& :hover{
+    		background-color: #ccc;
+		}
+
+		& .act{
+			background-color: #337ab7;
+    		border-color: #2e6da4;
+			color:#fff;
+
+			&:hover{
+				background-color: #286294;
+				color:#cdffff;
+			}
+			
+		}
+	}
+}
+
+
+.alert-info{
+	padding:15px;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+
+// 行政區域
+.area{
+	select{
+		width: 100%;
+		color:#888;
+		font-size: 1.2em;
+		letter-spacing: 0.1em;
+		border-color:#ccc;
+
+		padding:0.2em;
+		margin: 20px 0px;
+	}
+
+}
+
+
+
+//處理表格
+@media screen and (max-width:767px){
+	.tern-rwd.table-bordered{
+		border:none;
+	}
+
+	.tern-rwd tbody > tr {
+		display: block;
+		border:1px #6ca5d6 solid;
+		margin: 0 0 20px 0;
+		
+	}
+	.tern-rwd tbody > tr > td{
+		display: block;
+		overflow: hidden;
+	}
+
+	.tern-rwd tbody > tr > td::before{
+		content: attr(data-th) ' : ' ;
+		color:#888; 
+		display: block;
+		float: left;
+		width: 6em;
+		padding-right: 1em;
+		text-align: right;
+	}
+	
+	.tern-rwd tbody > tr > td > span{
+		display: block;
+		float: left;
+		width: calc(100% - 6em);
+	}
+
+	.tern-rwd tbody > tr> td > span.label.label-primary{
+		width: auto;
+		padding:8px;
+	}
+}
+
+
+footer{
+	background: #000;
+	color:#fff;
+	text-align: center;
+	padding: 18px 0px 10px;
+
+	margin-top: 30px;
+}
+
+#map {
+    width:100%;
+    height: 400px;
+	margin-top: 20px;
+ }
