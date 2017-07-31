@@ -52,8 +52,8 @@ areaDATE.send();
 	    var str ={};
 	    var place = {};
 	  
-	    place.lat = parseFloat(newARRY[i].Wgs84X);
-	    place.lng = parseFloat(newARRY[i].Wgs84Y);
+	    place.lat = parseFloat(newARRY[i].Wgs84Y);
+	    place.lng = parseFloat(newARRY[i].Wgs84X);
 
 	    
 	    str.map = map;
